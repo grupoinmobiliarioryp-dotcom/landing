@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Captamos tu propiedad | Grupo Inmobiliario R&P</title>
+  <meta name="description" content="¿Quieres vender o arrendar tu propiedad en Quillota y Marga Marga? Grupo Inmobiliario R&P capta tu inmueble con un proceso claro, rápido y profesional." />
+  <meta name="author" content="Grupo Inmobiliario R&P" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Captamos tu propiedad | Grupo Inmobiliario R&P">
+  <meta property="og:description" content="Vende o arrienda con un equipo experto en Quillota y Marga Marga. Agenda tu evaluación sin costo.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tu-dominio.cl/og-image-rp.jpg">
+  <meta property="og:url" content="https://tu-dominio.cl/captacion-propiedades">
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Grupo Inmobiliario R&P",
+    "areaServed": ["Quillota", "Marga Marga", "Provincia de Quillota y Marga Marga"],
+    "telephone": "+56 9 7373 5501",
+    "email": "grupoinmobiliarioryp@gmail.com",
+    "url": "https://tu-dominio.cl",
+    "slogan": "Tu proyecto, nuestra prioridad",
+    "founder": {
+      "@type": "Person",
+      "name": "Ricardo San Martín"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --black: #0c0c0c;
+      --white: #ffffff;
+      --yellow: #f6c000;
+      --gray: #f3f4f6;
+      --text: #1f2937;
+      --accent: #111827;
+      --success: #16a34a;
+      --error: #dc2626;
+    }
+    * { box-sizing: border-box }
+    html, body { margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--text); background: var(--white); }
+    a { color: var(--accent); text-decoration: none }
+    img { max-width: 100%; display: block }
+    .container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 8px; font-weight: 700; border: 0; cursor: pointer }
+    .btn-primary { background: var(--yellow); color: #111 }
+    .btn-dark { background: var(--black); color: var(--white) }
+    .btn-outline { background: transparent; border: 2px solid var(--black); color: var(--black) }
+    .badge { display: inline-block; padding: 6px 10px; background: var(--yellow); color: #111; border-radius: 999px; font-weight: 700; font-size: 12px }
+
+    /* Header */
+    header { background: var(--black); color: var(--white) }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0 }
+    .brand { display: flex; align-items: center; gap: 14px }
+    .brand-logo { width: 40px; height: 40px; border: 2px solid var(--white); border-radius: 8px; display: grid; place-items: center; font-weight: 800 }
+    .brand-title { font-weight: 800; letter-spacing: 0.4px }
+    .nav-actions { display: flex; align-items: center; gap: 10px }
+
+    /* Hero */
+    .hero { background: var(--black); color: var(--white); padding: 56px 0 36px }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px }
+    .hero h1 { font-size: 36px; line-height: 1.2; margin: 12px 0 10px }
+    .hero p { font-size: 16px; color: #e5e7eb; margin: 0 0 16px }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap }
+    .hero-card { background: #111; border: 1px solid #1f2937; padding: 18px; border-radius: 12px }
+
+    /* Sections */
+    section { padding: 48px 0 }
+    .section-title { font-size: 26px; margin: 0 0 14px }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px }
+    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px; background: var(--white) }
+    .card h3 { margin: 0 0 8px; font-size: 18px }
+    .card p { margin: 0; color: #4b5563 }
+    .list { display: grid; gap: 8px; margin: 10px 0 0; padding: 0 }
+    .list li { list-style: none; display: flex; gap: 10px; align-items: flex-start }
+    .check { color: var(--success); font-weight: 800 }
+
+    /* Form */
+    .form { border: 1px solid #e5e7eb; background: var(--gray); border-radius: 12px; padding: 20px }
+    .field { display: grid; gap: 6px; margin-bottom: 14px }
+    label { font-weight: 600 }
+    input, select, textarea {
+      width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #d1d5db; font: inherit; background: #fff;
+    }
+    textarea { min-height: 120px; resize: vertical }
+    .small { font-size: 12px; color: #6b7280 }
+    .form-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center }
+    .required { color: var(--error) }
+
+    /* Footer */
+    footer { background: var(--black); color: var(--white); padding: 30px 0; margin-top: 20px }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 18px }
+    .footer a { color: #e5e7eb }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid, .grid-3, .grid-2, .footer-grid { grid-template-columns: 1fr }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header role="banner">
+    <div class="container nav">
+      <div class="brand" aria-label="Grupo Inmobiliario R&P">
+        <div class="brand-logo" aria-hidden="true">RP</div>
+        <div>
+          <div class="brand-title">GRUPO INMOBILIARIO R&P</div>
+          <div class="small">Tu proyecto, nuestra prioridad</div>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="#formulario" aria-label="Ir al formulario de captación">Quiero captar mi propiedad</a>
+        <a class="btn btn-primary" href="https://wa.me/56973735501?text=Hola%20R%26P,%20quiero%20captar%20mi%20propiedad" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Capta tu propiedad hoy</span>
+        <h1>¿No encuentras la propiedad de tus sueños? Nosotros te la buscamos.</h1>
+        <p>Especialistas en Quillota y Marga Marga. Evaluamos tu inmueble sin costo, definimos estrategia y lo presentamos a compradores reales.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#formulario">Quiero evaluar mi propiedad</a>
+          <a class="btn btn-dark" href="tel:+56973735501">Llamar +56 9 7373 5501</a>
+        </div>
+        <div class="hero-card" aria-label="Compromisos de servicio">
+          <strong>Compromisos:</strong>
+          <ul class="list">
+            <li><span class="check">✔</span> Asesoría honesta y profesional</li>
+            <li><span class="check">✔</span> Reportes claros y seguimiento semanal</li>
+            <li><span class="check">✔</span> Fotografías y difusión de alto impacto</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Áreas de cobertura</h3>
+          <p>Provincia de Quillota y Marga Marga.</p>
+          <ul class="list">
+            <li><strong>Quillota:</strong> Quillota, La Cruz, La Calera</li>
+            <li><strong>Marga Marga:</strong> Quilpué, Villa Alemana, Limache</li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top:12px">
+          <h3>Contacto directo</h3>
+          <p><strong>Ricardo San Martín</strong> · Agente responsable</p>
+          <p>WhatsApp: <a href="https://wa.me/56973735501" target="_blank" rel="noopener">+56 9 7373 5501</a></p>
+          <p>Email: <a href="mailto:grupoinmobiliarioryp@gmail.com">grupoinmobiliarioryp@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Por qué captar con R&P</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Valoración correcta</h3>
+          <p>Precio competitivo según mercado local y condiciones reales del inmueble.</p>
+        </div>
+        <div class="card">
+          <h3>Marketing profesional</h3>
+          <p>Fotografías, video, copy persuasivo y segmentación inteligente en redes.</p>
+        </div>
+        <div class="card">
+          <h3>Gestión integral</h3>
+          <p>Filtrado de interesados, coordinación de visitas y apoyo documental.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Cómo funciona</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>1. Evaluación sin costo</h3>
+          <p>Agenda una visita o reunión. Revisamos estado, plusvalía y documentación.</p>
+        </div>
+        <div class="card">
+          <h3>2. Estrategia y difusión</h3>
+          <p>Plan de marketing, publicación y alcance local con seguimiento semanal.</p>
+        </div>
+        <div class="card">
+          <h3>3. Cierre seguro</h3>
+          <p>Negociación, apoyo en promesas, y acompañamiento hasta la firma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tipos de propiedades -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Qué propiedades buscamos</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Residenciales</h3>
+          <ul class="list">
+            <li>Casas y departamentos</li>
+            <li>Parcelas y terrenos</li>
+            <li>Condominios y casas en condominio</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Comerciales</h3>
+          <ul class="list">
+            <li>Locales y oficinas</li>
+            <li>Bodegas y galpones</li>
+            <li>Proyectos de inversión</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+      <div class="grid-2">
+        <div class="card">
+          <p>“Vendieron mi casa rápidamente y con excelente comunicación. 100% recomendado.”</p>
+          <p class="small">Laura M., La Cruz</p>
+        </div>
+        <div class="card">
+          <p>“Profesionales, claros y comprometidos. Acompañaron todo el proceso.”</p>
+          <p class="small">Carlos R., Quilpué</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario -->
+  <section id="formulario" aria-label="Formulario de captación">
+    <div class="container">
+      <h2 class="section-title">Cuéntanos de tu propiedad</h2>
+      <form class="form" action="https://tu-backend.cl/api/captacion" method="post" novalidate>
+        <div class="grid-2">
+          <div class="field">
+            <label for="nombre">Nombre y apellido <span class="required">*</span></label>
+            <input id="nombre" name="nombre" type="text" placeholder="Ej: Ricardo San Martín" required aria-required="true" />
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico <span class="required">*</span></label>
+            <input id="email" name="email" type="email" placeholder="tu@correo.cl" required aria-required="true" />
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="telefono">Teléfono / WhatsApp <span class="required">*</span></label>
+            <input id="telefono" name="telefono" type="tel" placeholder="+56 9 1234 5678" required aria-required="true" />
+          </div>
+          <div class="field">
+            <label for="comuna">Comuna</label>
+            <input id="comuna" name="comuna" type="text" placeholder="Quillota, La Cruz, Quilpué…" />
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="tipo">Tipo de propiedad <span class="required">*</span></label>
+            <select id="tipo" name="tipo" required aria-required="true">
+              <option value="">Selecciona una opción</option>
+              <option>Casa</option>
+              <option>Departamento</option>
+              <option>Parcela / Terreno</option>
+              <option>Local comercial</option>
+              <option>Oficina</option>
+              <option>Bodega / Galpón</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="operacion">Operación <span class="required">*</span></label>
+            <select id="operacion" name="operacion" required aria-required="true">
+              <option value="">Selecciona una opción</option>
+              <option>Vender</option>
+              <option>Arriendo</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="dormitorios">Dormitorios</label>
+            <input id="dormitorios" name="dormitorios" type="number" min="0" placeholder="Ej: 3" />
+          </div>
+          <div class="field">
+            <label for="banos">Baños</label>
+            <input id="banos" name="banos" type="number" min="0" placeholder="Ej: 2" />
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="metros">Metros construidos / terreno</label>
+            <input id="metros" name="metros" type="text" placeholder="Ej: 120 m² / 300 m²" />
+          </div>
+          <div class="field">
+            <label for="direccion">Dirección (opcional)</label>
+            <input id="direccion" name="direccion" type="text" placeholder="Calle y número" />
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="link">Enlace a anuncio (si existe)</label>
+            <input id="link" name="link" type="url" placeholder="https://..." />
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos detalles, estado, mejoras y tiempos estimados."></textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>
+            <input type="checkbox" name="consent" required aria-required="true" />
+            Acepto que R&P se comunique conmigo para asesoría y envío de información sobre mi propiedad.
+          </label>
+          <div class="small">Protegemos tu privacidad. No compartimos tus datos con terceros.</div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+          <a class="btn btn-dark" href="https://wa.me/56973735501?text=Hola%20R%26P,%20quiero%20captar%20mi%20propiedad" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <strong>Grupo Inmobiliario R&P</strong><br />
+        Provincia de Quillota y Marga Marga<br />
+        WhatsApp: <a href="https://wa.me/56973735501" target="_blank" rel="noopener">+56 9 7373 5501</a><br />
+        Email: <a href="mailto:grupoinmobiliarioryp@gmail.com">grupoinmobiliarioryp@gmail.com</a>
+      </div>
+      <div>
+        <div class="small">
+          © 2025 Grupo Inmobiliario R&P. Todos los derechos reservados.<br />
+          Responsable: Ricardo San Martín. Este sitio utiliza cookies mínimas para mejorar la experiencia.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts (opcionales) -->
+  <script>
+    // Ejemplo de validación simple en cliente (mejor usar validación en servidor)
+    document.querySelector('form').addEventListener('submit', function (e) {
+      const required = this.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(el => {
+        if (!el.value || (el.type === 'checkbox' && !el.checked)) {
+          el.style.borderColor = '#dc2626';
+          valid = false;
+        } else {
+          el.style.borderColor = '#d1d5db';
+        }
+      });
+      if (!valid) {
+        e.preventDefault();
+        alert('Por favor, completa los campos obligatorios marcados con *.');
+      }
+    });
+
+    // Placeholder para analytics
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag(){dataLayer.push(arguments);}
+    // gtag('js', new Date());
+    // gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</body>
+</html>
